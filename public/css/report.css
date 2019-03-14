@@ -1,0 +1,791 @@
+/*************************************/
+/* Imports */
+/*************************************/
+/*************************************/
+/* Functions */
+/*************************************/
+.center {
+  text-align: center;
+}
+.center > * {
+  display: inline-block;
+  width: auto;
+  float: initial !important;
+}
+/* how to use */
+/*
+.convert_to_vh(999);
+left: @return;
+*/
+.right-align {
+  text-align: right;
+}
+/*************************************/
+/* Common */
+/*************************************/
+/*************************************/
+/* Colors */
+/*************************************/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*************************************/
+/* Fonts */
+/*************************************/
+@font-face {
+  font-family: 'Maison Neue Book';
+  src: url(/fonts/MaisonNeueWEB-Book.woff2?73964fffa2509bf7529a6e0eb9036fa9) format('woff2'), url(/fonts/MaisonNeueWEB-Book.woff?653d6264d38d0d9f1e66930b53f9dfcc) format('woff');
+}
+@font-face {
+  font-family: 'Maison Neue Demi';
+  src: url(/fonts/MaisonNeueWEB-Demi.woff2?79b30b800b991497f466d1dec9b7943f) format('woff2'), url(/fonts/MaisonNeueWEB-Demi.woff?f5d898b322d2a5e04d9fffdd646ec0de) format('woff');
+}
+@font-face {
+  font-family: 'Maison Neue Medium';
+  src: url(/fonts/MaisonNeueWEB-Medium.woff2?ca74a286a1c6a6c0cf18c53d89361b2c) format('woff2'), url(/fonts/MaisonNeueWEB-Medium.woff?17de16394f669bff1aa314915dd20cc7) format('woff');
+}
+@font-face {
+  font-family: 'Maison Neue ExtraBold';
+  src: url(/fonts/MaisonNeue-ExtraBold.woff2?a2d3fd75d3360f6224fdd98b79b666fa) format('woff2'), url(/fonts/MaisonNeue-ExtraBold.woff?0d8a65eddc4733c902e59b37116f25b5) format('woff');
+}
+body {
+  position: relative;
+  font-family: "Maison Neue Book", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 400;
+  line-height: 1.1em;
+  font-style: normal;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0 68px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8,
+td.highlight,
+td.small-highlight,
+th.small-highlight,
+th.rotated-highlight {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+  margin: 0;
+}
+th.rotated-highlight > span {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.center {
+  text-align: center;
+}
+h1 {
+  font-size: 20pt;
+  line-height: 1.1em;
+  margin-bottom: 22.5pt;
+}
+h2,
+th.big-highlight {
+  font-size: 16pt;
+  line-height: 1.1em;
+  margin-bottom: 19.2pt;
+}
+th.big-highlight {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+}
+h3 {
+  font-size: 14pt;
+  line-height: 1.1em;
+  margin-bottom: 16.8pt;
+}
+h4 {
+  font-size: 11pt;
+  line-height: 1.1em;
+  margin-bottom: 13.2pt;
+}
+h5 {
+  font-size: 9pt;
+  line-height: 1.1em;
+  margin-bottom: 6pt;
+}
+h6,
+td.small-highlight,
+th.small-highlight {
+  font-size: 9pt;
+  line-height: 1.1em;
+}
+th.rotated-highlight {
+  font-size: 6pt;
+  line-height: 1.1em;
+}
+p,
+td {
+  font-family: "Maison Neue Book", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  line-height: 1.1em;
+  margin: 0 0 13.2pt 0;
+}
+p.small-text {
+  font-size: 9pt;
+  line-height: 1.2em;
+  margin-bottom: 10.8pt;
+}
+td,
+th {
+  padding: 8px;
+}
+th {
+  font-family: "Maison Neue Book", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  line-height: 1.1em;
+}
+table.small-table td,
+table.small-table th {
+  font-size: 6pt;
+  line-height: 1em;
+  padding: 3px;
+}
+header,
+header p,
+footer,
+footer td {
+  font-size: 8pt;
+  line-height: 1.3em;
+}
+b {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+}
+header {
+  display: block;
+  position: relative;
+  padding: 76px 0 0px 0;
+  width: 100%;
+}
+header .forum-logo {
+  width: 107px;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+header p {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  color: #000000;
+  margin: 0;
+}
+header p:nth-child(1) {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+}
+header p:nth-child(2) {
+  width: 50%;
+  text-align: right;
+}
+.table-footer {
+  text-align: left;
+}
+.table-footer span.square {
+  border-radius: 1px;
+  border: solid 1px #000000;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  margin-right: 5px;
+  display: inline-block;
+}
+.table-footer span.square:last-of-type {
+  margin-left: 20px;
+}
+footer {
+  width: 100%;
+  padding-bottom: 30px;
+}
+footer p {
+  color: #000000;
+  margin: 0;
+  text-align: center;
+}
+footer table td {
+  width: 40%;
+  padding: 0;
+  text-align: center;
+}
+footer table td:first-child {
+  text-align: left;
+  width: 30%;
+}
+footer table td:last-child {
+  text-align: right;
+  width: 30%;
+}
+.wrapper {
+  clear: both;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.not-bold {
+  font-family: "Maison Neue Book", Helvetica, Arial, Sans-Serif, sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table tr.inside-margin td {
+  height: 8px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+}
+.blue-box {
+  background-color: #EBF3FC;
+  padding: 8px;
+}
+.blue-box table:last-child tr:last-child td {
+  padding-bottom: 0;
+}
+.blue-box *:last-child {
+  margin-bottom: 0;
+}
+.grey-box {
+  background-color: #F5F5F5;
+  padding: 8px;
+}
+.grey-box table:last-child tr:last-child td {
+  padding-bottom: 0;
+}
+.grey-box *:last-child {
+  margin-bottom: 0;
+}
+section {
+  page-break-after: always;
+}
+section .section-module {
+  page-break-inside: avoid;
+  margin: 0 0 30px 0;
+}
+section .section-module:last-child {
+  margin: 0;
+}
+section .section-module.bordered {
+  border-top: 1px solid #777;
+}
+section:last-of-type {
+  page-break-after: auto;
+}
+section.section-cover h2,
+section.section-cover h3,
+section.section-cover p {
+  margin-bottom: 15px;
+}
+section.section-cover p {
+  font-size: 9pt;
+  line-height: 1rem;
+}
+section.section-cover .blue-box,
+section.section-cover .grey-box {
+  padding: 15px;
+}
+section.section-cover .section-module.section-module-scores {
+  margin-bottom: 30px;
+}
+section.section-cover table.table-score thead tr th {
+  font-size: 16pt;
+  line-height: 16pt;
+  text-align: left;
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+}
+section.section-cover table.table-score thead tr th:nth-child(2),
+section.section-cover table.table-score thead tr th:nth-child(3) {
+  font-size: 9pt;
+  line-height: 11pt;
+  vertical-align: bottom;
+}
+section.section-cover table.table-score tr.total td {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+}
+section.section-cover table.table-score th,
+section.section-cover table.table-score td {
+  font-size: 11pt;
+  line-height: 11pt;
+  padding: 5.5pt 10px;
+  text-align: center;
+}
+section.section-cover table.table-score th:first-child,
+section.section-cover table.table-score td:first-child {
+  padding-left: 0;
+}
+section.section-cover table.table-score td:last-child {
+  padding-right: 0;
+}
+section.section-cover table.table-score td:nth-child(3) {
+  text-align: center;
+}
+section.section-cover table.table-score tbody tr td:first-child {
+  text-align: left;
+}
+section.section-cover table.table-score td.chart {
+  width: 100%;
+  vertical-align: middle;
+}
+section.section-cover span.lost {
+  color: #e42a1a;
+}
+section.section-cover .insight-main {
+  background-color: #EBF3FC;
+}
+section.section-cover .insight-main h3 {
+  font-size: 13pt;
+}
+section.section-cover .insight-main.insight-issue-pacing p.answers-drilldown {
+  display: none;
+}
+section.section-cover .insight-main {
+  margin-bottom: 15px;
+}
+section.section-cover .insights-secondary {
+  display: table;
+  position: relative;
+  width: 100%;
+}
+section.section-cover .insights-secondary h3 {
+  font-size: 13pt;
+}
+section.section-cover .insights-secondary.remove-questions .insight-secondary p.answers-drilldown {
+  display: none !important;
+}
+section.section-cover .insight-secondary.insight-issue-pacing p.answers-drilldown {
+  visibility: hidden;
+}
+section.section-cover .insights-secondary .separator {
+  width: 15px;
+}
+section.section-cover .insight-secondary {
+  display: table-cell;
+  width: 49%;
+  padding: 15px;
+  background-color: #EBF3FC;
+}
+section.section-cover .insight-secondary .grey-box {
+  background-color: transparent;
+}
+table.section-score-table td.chart {
+  width: 100%;
+  vertical-align: middle;
+}
+table.section-score-table td,
+table.section-score-table th {
+  font-size: 9pt;
+  line-height: 9pt;
+  padding: 5.5pt 10px;
+  text-align: center;
+}
+table.section-score-table td.table-cell-group,
+table.section-score-table th.table-cell-group {
+  padding: 5.5pt 5px;
+}
+table.section-score-table td:first-child,
+table.section-score-table th:first-child {
+  padding-left: 0;
+}
+table.section-score-table td:last-child,
+table.section-score-table th:last-child {
+  padding-right: 0;
+  padding-left: 15px;
+}
+table.section-score-table td.score,
+table.section-score-table th.score {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+  padding-right: 15px;
+}
+table.section-score-table thead th {
+  border-bottom: 1px solid #777;
+  padding-bottom: 4px;
+}
+table.section-score-table thead th .header-label__bubble {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 0 -3px 5px;
+  border-radius: 50%;
+}
+table.section-score-table thead th .header-label__bubble--mock-test {
+  background-color: #2c8eff;
+}
+table.section-score-table thead th .header-label__bubble--homework {
+  background-color: #5FD4FA;
+}
+table.section-score-table thead th .header-label__text--trailing-space {
+  padding-right: 10px;
+}
+table.section-score-table thead th:last-child {
+  text-align: right;
+}
+table.section-score-table tbody td {
+  white-space: nowrap;
+  color: #777777;
+}
+table.section-score-table tbody tr:first-child td {
+  padding-top: 10px;
+}
+table.section-score-table tbody tr.current-result-line td {
+  color: #000000;
+}
+section.section-score h2,
+section.section-score h3,
+section.section-score p {
+  margin-bottom: 15px;
+}
+section.section-score p {
+  font-size: 9pt;
+  line-height: 1rem;
+}
+section.section-score table.section-score-insight-table {
+  border-bottom: 1px solid #777;
+}
+section.section-score table.section-score-insight-table th {
+  border-bottom: 1px solid #777;
+}
+section.section-score table.section-score-insight-table td,
+section.section-score table.section-score-insight-table th {
+  vertical-align: middle;
+  height: 27px;
+  font-size: 9pt;
+  line-height: 9pt;
+  padding: 2px 5px;
+  text-align: center;
+  width: 15%;
+}
+section.section-score table.section-score-insight-table tr.primary-issue td,
+section.section-score table.section-score-insight-table tr.primary-issue th {
+  padding: 5px 5px 2px 5px;
+}
+section.section-score table.section-score-insight-table td:first-child,
+section.section-score table.section-score-insight-table th:first-child {
+  padding-left: 0;
+}
+section.section-score table.section-score-insight-table td:last-child,
+section.section-score table.section-score-insight-table th:last-child {
+  padding-right: 0;
+}
+section.section-score table.section-score-insight-table thead th.analytics-composite-column {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+}
+section.section-score table.section-score-insight-table thead th:first-child {
+  width: auto;
+}
+section.section-score table.section-score-insight-table tbody tr.rotated-header td {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+  font-size: 16pt;
+  background-color: transparent;
+  text-align: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: 5%;
+  padding-right: 0;
+}
+section.section-score table.section-score-insight-table tbody td:nth-child(even) {
+  background-color: #F5F5F5;
+}
+section.section-score table.section-score-insight-table tbody td:first-child {
+  text-align: right;
+  background-color: #ffffff;
+  width: 20%;
+  padding-right: 20px;
+}
+section.section-score table.section-score-insight-table tbody td.analytics-composite-column {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+}
+section.section-score table.section-score-insight-table-bigcells tbody td,
+section.section-score table.section-score-insight-table-bigcells tbody th {
+  height: 54px;
+}
+section.score-answers .score-answers-inner {
+  position: relative;
+  clear: both;
+}
+section.score-answers .score-answers-inner:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+section.score-answers .score-answers-column {
+  width: 22%;
+  float: left;
+  margin-left: 4%;
+}
+section.score-answers .score-answers-column h4 {
+  text-align: center;
+  font-size: 9pt;
+  margin-bottom: 15px;
+}
+section.score-answers .score-answers-column td.odd {
+  background-color: #F5F5F5;
+}
+section.score-answers .score-answers-column ul.answer-column-legends {
+  list-style-type: none;
+  margin: 20px 0 0 0;
+  border-top: 1px solid #777777;
+  font-size: 6px;
+  padding: 6px 0 0 0;
+}
+section.score-answers .score-answers-column:first-child {
+  margin-left: 0;
+}
+section.score-answers table thead th {
+  page-break-inside: avoid;
+  border-bottom: 1px solid #777;
+  position: relative;
+  text-align: left;
+  height: 50px;
+  vertical-align: bottom;
+}
+section.score-answers table tr:first-child {
+  page-break-inside: avoid;
+}
+section.score-answers table td,
+section.score-answers table th {
+  text-align: center;
+  vertical-align: middle;
+  width: 25%;
+}
+section.score-answers table tr.type-ofc td {
+  line-height: 12px;
+  height: 36px;
+}
+section.score-answers table td.correct {
+  background-color: #62e89c;
+  color: #62e89c;
+}
+section.score-answers table td.incorrect {
+  background-color: #EB515A;
+  color: #fff;
+}
+section.score-answers table td.have-tags {
+  background-color: #FCCE4D;
+}
+section.score-answers table.answers-table-columns-5 td,
+section.score-answers table.answers-table-columns-5 th {
+  width: 20%;
+}
+section.score-categories h1,
+section.score-categories h3 {
+  margin-bottom: 11.25pt;
+}
+section.score-categories .score-categories-analysis table {
+  margin: 0 0 22px 0;
+}
+section.score-categories .score-categories-analysis table tr td,
+section.score-categories .score-categories-analysis table tr th {
+  padding: 0;
+  vertical-align: middle;
+}
+section.score-categories .score-categories-analysis table:last-child {
+  margin-bottom: 0;
+}
+section.score-categories .score-categories-analysis table.score-sections thead tr th {
+  border-bottom: 1px solid #000;
+}
+section.score-categories .score-categories-analysis table.score-sections tbody tr td {
+  border-bottom: 1px solid #777;
+}
+section.score-categories .score-categories-analysis table.score-subsections thead th,
+section.score-categories .score-categories-analysis table.score-sections thead th {
+  border-bottom: 1px solid #777;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr,
+section.score-categories .score-categories-analysis table.score-sections tr {
+  page-break-inside: avoid;
+}
+section.score-categories .score-categories-analysis table.score-subsections td,
+section.score-categories .score-categories-analysis table.score-sections td,
+section.score-categories .score-categories-analysis table.score-subsections th,
+section.score-categories .score-categories-analysis table.score-sections th {
+  height: 22.5pt;
+  padding: 6px 0 5px 0;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.summary td,
+section.score-categories .score-categories-analysis table.score-sections tr.summary td {
+  height: 25px;
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+  background-color: #EBF3FC;
+  border-bottom: 1px solid #777;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.score-results-missed td,
+section.score-categories .score-categories-analysis table.score-sections tr.score-results-missed td {
+  height: 15px;
+  text-align: left;
+  margin: 0;
+  padding: 3px 0 2px 0;
+  border-bottom: 1px solid #777;
+  background-color: #F9F9F9;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.score-results-missed td table td,
+section.score-categories .score-categories-analysis table.score-sections tr.score-results-missed td table td {
+  font-size: 9pt;
+  line-height: 11.25pt;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.score-results-missed td table td:nth-of-type(1),
+section.score-categories .score-categories-analysis table.score-sections tr.score-results-missed td table td:nth-of-type(1) {
+  white-space: nowrap;
+  width: 0;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.score-results-missed td table td:nth-of-type(2),
+section.score-categories .score-categories-analysis table.score-sections tr.score-results-missed td table td:nth-of-type(2) {
+  width: 100%;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.score-results-missed > td,
+section.score-categories .score-categories-analysis table.score-sections tr.score-results-missed > td {
+  border-bottom: none;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.score-results-missed td span,
+section.score-categories .score-categories-analysis table.score-sections tr.score-results-missed td span {
+  padding-left: 10px;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.score-results-missed td span.incorrect,
+section.score-categories .score-categories-analysis table.score-sections tr.score-results-missed td span.incorrect {
+  color: #e42a1a;
+}
+section.score-categories .score-categories-analysis table.score-subsections tr.score-results-missed td span.omitted,
+section.score-categories .score-categories-analysis table.score-sections tr.score-results-missed td span.omitted {
+  color: #999999;
+}
+section.score-categories .score-categories-analysis tbody tr th {
+  font-size: 9pt;
+  line-height: 1.1em;
+  text-align: left;
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 900;
+  width: 21%;
+  padding-left: 0;
+}
+section.score-categories .score-categories-analysis tr td {
+  font-size: 9pt;
+  line-height: 1.1em;
+  text-align: center;
+}
+section.score-categories .score-categories-analysis tr td.excelent {
+  color: #12ce66;
+}
+section.score-categories .score-categories-analysis tr td.poor {
+  color: #e42a1a;
+}
+section.score-categories .score-categories-analysis tr td.change-percent-col.excelent,
+section.score-categories .score-categories-analysis tr td.change-percent-col.ok {
+  color: #12ce66;
+}
+section.score-categories .score-categories-analysis tr td.change-percent-col.poor {
+  color: #e42a1a;
+}
+section.score-categories .score-categories-analysis tr td:nth-child(1) {
+  width: 21%;
+  text-align: left;
+}
+section.score-categories .score-categories-analysis tr td:nth-child(2) {
+  width: 13%;
+}
+section.score-categories .score-categories-analysis tr td:nth-child(3) {
+  width: 13%;
+}
+section.score-categories .score-categories-analysis tr td:nth-child(4) {
+  width: 13%;
+}
+section.score-categories .score-categories-analysis tr td:nth-child(5) {
+  width: 13%;
+}
+section.score-categories .score-categories-analysis tr td:nth-child(6) {
+  width: 13%;
+}
+section.score-categories .score-categories-analysis tr td:nth-child(7) {
+  width: 13%;
+}
+section.score-categories .score-categories-analysis thead tr th {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 600;
+  height: 15px;
+  text-align: center;
+}
+section.score-categories .score-categories-analysis tr.score-results-total td {
+  font-family: "Maison Neue Demi", Helvetica, Arial, Sans-Serif, sans-serif;
+  font-weight: 600;
+}
+section.score-categories .score-categories-analysis tr.score-results-total td:first-child {
+  text-align: left;
+}
+body.score-report-act table.small-table td,
+body.score-report-act table.small-table th {
+  font-size: 6pt;
+  line-height: 1em;
+  padding: 2px;
+}
+/* CHART Progress bar */
+.progress {
+  height: 11pt;
+  border-radius: 10px;
+  position: relative;
+  background-color: #EBF3FC;
+}
+.progress.complete {
+  background-color: #62e89c;
+}
+.progress.complete .progress-bar {
+  background-color: #12ce66;
+}
+.progress .progress-bar {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2c8eff;
+}
+.progress .progress-bar.practice {
+  background-color: #5FD4FA;
+}
+.progress .progress-bar .progress-value {
+  font-size: 8pt;
+  color: #fff;
+  padding: 0 5.5pt;
+  float: right;
+  line-height: 12pt;
+  height: 11pt;
+}
+.progress .progressbar-title {
+  font-size: 8pt;
+  color: #fff;
+  padding: 0 8px;
+  float: right;
+  line-height: 12pt;
+  height: 11pt;
+}
