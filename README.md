@@ -17,4 +17,6 @@ The site should show up locally at [http://127.0.0.1:8000](http://127.0.0.1:8000
 
 at that link, you'll see the HTML version of the report in preview
 
-to preview the PDF version of the report go to [/report](http://127.0.0.1:8000/report)
+<strike>to preview the PDF version of the report go to [/report](http://127.0.0.1:8000/report)</strike>
+
+for various reasons the original plan to preview the PDF in the browser was not a good idea
