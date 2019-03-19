@@ -6,14 +6,14 @@
         <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
         <title>Forum - Score Results </title>
 
-        <link rel="stylesheet" data-include-header-footer="" type="text/css" href="{{ asset('css/report.css') }}">        
+        <link rel="stylesheet" data-include-header-footer="" type="text/css" href="{{ URL::asset('/css/report.css') }}">        
         
-        <script src="{{ url('js/reporting_charts.js') }}" charset="utf-8"></script>        
+        <script src="{{ URL::to('/js/reporting_charts.js') }}" charset="utf-8"></script>        
     </head>
     <body class="{{ $report_name }}">
         <header>
             <p>
-                <img src="{{ asset('images/forum-logo.svg') }}" alt="" class="forum-logo">
+                <img src="{{ URL::asset('/images/forum-logo.svg') }}" alt="" class="forum-logo">
             </p><p>www.forumeducation.nyc<br>forum@forumeducation.nyc</p>
         </header>
 

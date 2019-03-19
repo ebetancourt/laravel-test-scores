@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'ReportController@index')->name('home');
+Route::get('/report', 'ReportController@report')->name('report');

@@ -4,6 +4,9 @@
 /*************************************/
 /* Functions */
 /*************************************/
+html {
+  -webkit-print-color-adjust: exact;
+}
 .center {
   text-align: center;
 }
